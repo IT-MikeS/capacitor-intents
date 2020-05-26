@@ -17,7 +17,7 @@ import { Plugins } from '@capacitor/core';
 
 let receiverId: string | null = null;
 
-receiverId = await Plugins.CapacitorIntents.registerBroadcastReceiver({filters: ['example.action.name']}, async (data) => {
+receiverId = await Plugins.CapacitorIntents.registerBroadcastReceiver({filters: ['example.itmikes.action']}, async (data) => {
     // data is a JS Object
     console.dir(data);
 

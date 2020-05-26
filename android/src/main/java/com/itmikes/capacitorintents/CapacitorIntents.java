@@ -1,5 +1,6 @@
 package com.itmikes.capacitorintents;
 
+import com.getcapacitor.JSArray;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
@@ -50,7 +51,7 @@ public class CapacitorIntents extends Plugin {
     };
 
     @PluginMethod(returnType=PluginMethod.RETURN_CALLBACK)
-    public void registerBroadcastReceiver(PluginCall call) {
+    public void registerBroadcastReceiver(PluginCall call) throws JSONException {
         call.save();
         requestBroadcastUpdates(call);
         watchingCalls.put(call.getCallbackId(), call);
@@ -71,9 +72,13 @@ public class CapacitorIntents extends Plugin {
         call.success();
     }
 
-    private void requestBroadcastUpdates(final PluginCall call) {
+    private void requestBroadcastUpdates(final PluginCall call) throws JSONException {
         IntentFilter ifilt = new IntentFilter();
-        ifilt.addAction("crofters.two.FGSCAN");
+        JSArray jsArr = call.getArray("filters");
+        for(int i = 0; i < jsArr.length(); i++) {
+            ifilt.addAction(jsArr.getString(i));
+        }
+        ifilt.addAction("example.itmikes.action");
         this.getContext().registerReceiver(myReceiver, ifilt);
         broadcastReceiverCall = call;
     }
