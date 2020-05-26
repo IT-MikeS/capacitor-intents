@@ -10,7 +10,7 @@ export class CapacitorIntentsWeb extends WebPlugin implements CapacitorIntentsPl
   }
 
   //@ts-ignore
-  async registerBroadcastReceiver(options: {filters: string[]}, callback: CallbackGeneric) {
+  async registerBroadcastReceiver(options: {filters: string[]}, callback: CallbackGeneric): Promise<string> {
     Promise.reject('Feature not implemented in web.');
   }
 
