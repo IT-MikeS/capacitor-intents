@@ -1,37 +1,37 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:3-4:14
+ADDED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:3-4:14
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:3-4:14
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:3-4:14
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:3-4:14
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:3-4:14
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:3-4:14
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:3-4:14
 	package
-		ADDED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:3:7-62
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
+		ADDED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:3:7-62
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-		ADDED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:3-4:14
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+		ADDED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:3-4:14
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-		ADDED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:3-4:14
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+		ADDED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:3-4:14
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml:2:13-71
+		ADDED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml:2:13-71
 uses-sdk
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-		ADDED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+		ADDED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-		ADDED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
-		INJECTED from C:\SoftwareDevelopment\OpenSource\TestingIdeas\capacitor-intents\android\src\main\AndroidManifest.xml
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+		ADDED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
+		INJECTED from C:\OSS\@capacitor-community\android-intents\android\src\main\AndroidManifest.xml
