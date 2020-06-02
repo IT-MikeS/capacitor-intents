@@ -1,6 +1,6 @@
 {
-  "name": "capacitor-intents",
-  "version": "0.1.5",
+  "name": "@capacitor-community/android-intents",
+  "version": "0.2.1",
   "description": "Simple intent tools for Capacitor on Android",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",

@@ -31,24 +31,9 @@ import org.json.JSONObject;
 @NativePlugin()
 public class CapacitorIntents extends Plugin {
 
-    private PluginCall broadcastReceiverCall;
     private static final String LOG_TAG = "Capacitor Intents";
     private Map<String, PluginCall> watchingCalls = new HashMap<>();
-    private BroadcastReceiver myReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            //Log.w(LOG_TAG, getIntentJson(intent).toString());
-            if(broadcastReceiverCall != null) {
-                JSObject jsO = null;
-                try {
-                    jsO = JSObject.fromJSONObject(getIntentJson(intent));
-                    broadcastReceiverCall.success(jsO);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    };
+    private Map<String, BroadcastReceiver> receiverMap = new HashMap<>();
 
     @PluginMethod(returnType=PluginMethod.RETURN_CALLBACK)
     public void registerBroadcastReceiver(PluginCall call) throws JSONException {
@@ -63,29 +48,47 @@ public class CapacitorIntents extends Plugin {
         if (callbackId != null) {
             PluginCall removed = watchingCalls.remove(callbackId);
             if (removed != null) {
+                removeReceiver(callbackId);
                 removed.release(bridge);
             }
-        }
-        if (watchingCalls.size() == 0) {
-            removeReceiver();
         }
         call.success();
     }
 
     private void requestBroadcastUpdates(final PluginCall call) throws JSONException {
+        final String callBackID = call.getCallbackId();
         IntentFilter ifilt = new IntentFilter();
         JSArray jsArr = call.getArray("filters");
-        for(int i = 0; i < jsArr.length(); i++) {
-            ifilt.addAction(jsArr.getString(i));
+        if (jsArr.length() >= 1) {
+            for (int i = 0; i < jsArr.length(); i++) {
+                ifilt.addAction(jsArr.getString(i));
+            }
+            receiverMap.put(callBackID, new BroadcastReceiver() {
+                @Override
+                public void onReceive(Context context, Intent intent) {
+                    //Log.w(LOG_TAG, getIntentJson(intent).toString());
+                    PluginCall refCall = watchingCalls.get(callBackID);
+                    if (refCall != null) {
+                        JSObject jsO = null;
+                        try {
+                            jsO = JSObject.fromJSONObject(getIntentJson(intent));
+                            refCall.success(jsO);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
+
+            this.getContext().registerReceiver(receiverMap.get(callBackID), ifilt);
+        } else {
+            call.error("Filters are required: at least 1 entry");
         }
-        ifilt.addAction("example.itmikes.action");
-        this.getContext().registerReceiver(myReceiver, ifilt);
-        broadcastReceiverCall = call;
     }
 
-    private void removeReceiver() {
-        this.getContext().unregisterReceiver(myReceiver);
-        broadcastReceiverCall = null;
+    private void removeReceiver(String callBackID) {
+        this.getContext().unregisterReceiver(receiverMap.get(callBackID));
+        this.receiverMap.remove(callBackID);
     }
 
     private static Object toJsonValue(final Object value) throws JSONException {
