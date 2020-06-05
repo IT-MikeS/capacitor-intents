@@ -55,6 +55,15 @@ public class CapacitorIntents extends Plugin {
         call.success();
     }
 
+    @PluginMethod()
+    public void sendBroadcastIntent(PluginCall call) {
+        String actionToUse = call.getString("action");
+        JSObject passingData = call.getObject("value");
+        Intent intended = new Intent(actionToUse);
+        intended.putExtra("value", passingData.toString());
+        this.getContext().sendBroadcast(intended);
+    }
+
     private void requestBroadcastUpdates(final PluginCall call) throws JSONException {
         final String callBackID = call.getCallbackId();
         IntentFilter ifilt = new IntentFilter();

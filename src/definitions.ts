@@ -10,4 +10,6 @@ export interface CapacitorIntentsPlugin {
   registerBroadcastReceiver(options: {filters: string[]}, callback: CallbackGeneric): Promise<string>;
 
   unregisterBroadcastReceiver(options: {id: string}): Promise<void>;
+
+  sendBroadcastIntent(options: {action: string; value: {[key: string]: any}}): Promise<void>;
 }

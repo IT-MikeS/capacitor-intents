@@ -18,6 +18,11 @@ export class CapacitorIntentsWeb extends WebPlugin implements CapacitorIntentsPl
   async unregisterBroadcastReceiver(options: {id: string}) {
     Promise.reject('Feature not implemented in web.');
   }
+
+  //@ts-ignore
+  async sendBroadcastIntent(options: {action: string; value: {[key: string]: any}}): Promise<void> {
+    Promise.reject('Feature not implemented in web.');
+  }
 }
 
 const CapacitorIntents = new CapacitorIntentsWeb();
