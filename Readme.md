@@ -10,7 +10,7 @@ This plugin currently only supports broadcast receiving of intents, however I in
 
 ## Usage
 
-#### EXAMPLE: Register a broadcast receiver with filters for actions, then after receive first broadcast unregister it.
+#### EXAMPLE: Register a broadcast receiver with filters for actions, then after receive first broadcast unregister it. Then send a BroadcastIntent to test it all. 
 ```ts
 import 'capacitor-intents';
 import { Plugins } from '@capacitor/core';
@@ -28,8 +28,10 @@ receiverId = await Plugins.CapacitorIntents.registerBroadcastReceiver({filters: 
 });
 
 async function testMe() {
-    Plugins.CapacitorIntents.sendBroadcastIntent({action: 'example.itmikes.action', value: {testValue: "Test String"}});
+    await Plugins.CapacitorIntents.sendBroadcastIntent({action: 'example.itmikes.action', value: {testValue: "Test String"}});
 } 
+
+testMe();
 
 ```
 
