@@ -18,13 +18,19 @@ import { Plugins } from '@capacitor/core';
 let receiverId: string | null = null;
 
 receiverId = await Plugins.CapacitorIntents.registerBroadcastReceiver({filters: ['example.itmikes.action']}, async (data) => {
-    // data is a JS Object
+    // data is a JS Object but could contain any structure
     console.dir(data);
+    // data in this example will be {value: **JSONString of the below passed value**}
 
     // now unregister
     if(receiverId !== null)
         await Plugins.CapacitorIntents.unregisterBroadcastReceiver({id: receiverId});
 });
+
+async function testMe() {
+    Plugins.CapacitorIntents.sendBroadcastIntent({action: 'example.itmikes.action', value: {testValue: "Test String"}});
+} 
+
 ```
 
 ---
