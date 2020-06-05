@@ -1,5 +1,5 @@
 # Simple intent tools for Capacitor on Android platform.
-This plugin currently only supports broadcast receiving of intents, however I intend to add more functionallity, such as sending broadcast intents ect.
+This plugin currently supports multiple broadcast receiving of intents, and sending out BroadcastIntents, however I intend to add more functionallity.
 
 ---
 
