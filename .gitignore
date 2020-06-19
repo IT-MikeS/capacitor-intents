@@ -1,6 +1,8 @@
 # compiled output
 /dist
 ios/Plugin/Pods
+/android/build/*
+/android/.gradle/*
 
 # dependencies
 /node_modules
