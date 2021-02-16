@@ -6,7 +6,7 @@ This plugin currently supports multiple broadcast receiving of intents, and send
 ## Installation
 
 #### 1. Install module
-`npm i capacitor-intents`
+`npm i capacitor-android-intents`
 
 #### 2. Modify YOUR_PROJECT\android\app\src\main\java\YOUR_appId\MainActivity.java to reflect below.
 ```java
@@ -43,7 +43,7 @@ public class MainActivity extends BridgeActivity {
 
 #### EXAMPLE: Register a broadcast receiver with filters for actions, then after receive first broadcast unregister it. Then send a BroadcastIntent to test it all. 
 ```ts
-import 'capacitor-intents';
+import 'capacitor-android-intents';
 import { Plugins } from '@capacitor/core';
 
 let receiverId: string | null = null;
