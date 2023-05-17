@@ -5,7 +5,8 @@
     "build": "pnpm turbo build",
     "fmt": "pnpm turbo fmt",
     "lint": "pnpm turbo lint",
-    "shipit": "pnpm turbo shipit"
+    "shipit": "pnpm turbo shipit",
+    "shipit-next": "pnpm turbo shipit-next"
   },
   "devDependencies": {
     "turbo": "^1.9.6"
