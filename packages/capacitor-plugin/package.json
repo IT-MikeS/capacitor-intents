@@ -1,6 +1,6 @@
 {
   "name": "capacitor-android-intents",
-  "version": "1.0.0-next.1",
+  "version": "1.0.0",
   "description": "Simple intent tools for Capacitor on Android",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
