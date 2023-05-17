@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "main"
+      - "next"
+  pull_request:
+    types:
+      - 'synchronize'
+      - 'opened'
+  workflow_dispatch:
+
+permissions: read-all
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Setup Tools'
+        uses: ./.github/actions/setup-tools
+
+  lint:
+    needs: [setup]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Setup Tools'
+        uses: ./.github/actions/setup-tools
+      - name: 'Lint Package'
+        shell: bash
+        run: |
+          pnpm run lint
+
+  build:
+    needs: [setup, lint]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: 'Setup Tools'
+        uses: ./.github/actions/setup-tools
+      - name: 'Build Package'
+        shell: bash
+        run: |
+          pnpm run build
