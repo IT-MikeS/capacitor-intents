@@ -39,7 +39,8 @@
     "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "prepublishOnly": "pnpm run build",
-    "shipit": "pnpm semantic-release && npm publish --tag latest --provenance"
+    "shipit": "pnpm semantic-release && npm publish --tag latest --provenance",
+    "shipit-next": "pnpm semantic-release && npm publish --tag next --provenance"
   },
   "devDependencies": {
     "@capacitor/android": "^5.0.3",
