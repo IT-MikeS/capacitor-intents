@@ -13,14 +13,14 @@
     "ios/Plugin/",
     "BaselineCapacitorPlugin.podspec"
   ],
-  "author": "AUTHOR_NAME",
+  "author": "Mike Summerfeldt",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com.git"
+    "url": "https://github.com/IT-MikeS/capacitor-intents"
   },
   "bugs": {
-    "url": "https://github.com/issues"
+    "url": "https://github.com/IT-MikeS/capacitor-intents/issues"
   },
   "keywords": [
     "capacitor",
