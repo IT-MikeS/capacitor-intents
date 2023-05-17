@@ -8,8 +8,7 @@
     "build": "tsc && vite build && pnpm cap sync",
     "preview": "vite preview",
     "test.e2e": "cypress run",
-    "test.unit": "vitest",
-    "lint": "eslint"
+    "test.unit": "vitest"
   },
   "dependencies": {
     "@capacitor/app": "^5.0.2",
