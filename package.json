@@ -1,57 +1,14 @@
 {
-  "name": "capacitor-android-intents",
-  "version": "0.1.1",
-  "description": "Simple intent tools for Capacitor on Android",
-  "main": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "name": "capacitor-intents-repo",
+  "private": true,
   "scripts": {
-    "build": "npm run clean && tsc",
-    "clean": "rimraf ./dist",
-    "watch": "tsc --watch",
-    "prepublishOnly": "npm run build",
-    "publish-package": "npm publish"
-  },
-  "author": "IT-MikeS",
-  "license": "MIT",
-  "dependencies": {
-    "@capacitor/core": "latest"
+    "build": "pnpm turbo build",
+    "fmt": "pnpm turbo fmt",
+    "lint": "pnpm turbo lint",
+    "shipit": "pnpm turbo shipit",
+    "shipit-next": "pnpm turbo shipit-next"
   },
   "devDependencies": {
-    "@capacitor/android": "latest",
-    "@capacitor/ios": "latest",
-    "husky": "^4.2.5",
-    "np": "^6.3.2",
-    "prettier": "^2.0.5",
-    "prettier-plugin-java": "^0.8.0",
-    "pretty-quick": "^2.0.1",
-    "rimraf": "^3.0.0",
-    "typescript": "^3.2.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "files": [
-    "dist/",
-    "android/",
-    "CapacitorIntents.podspec"
-  ],
-  "keywords": [
-    "capacitor",
-    "plugin",
-    "native"
-  ],
-  "capacitor": {
-    "android": {
-      "src": "android"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/IT-MikeS/capacitor-intents.git"
-  },
-  "bugs": {
-    "url": "https://github.com/IT-MikeS/capacitor-intents.git/issues"
+    "turbo": "^1.9.6"
   }
 }
