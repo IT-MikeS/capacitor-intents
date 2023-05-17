@@ -35,7 +35,7 @@
     "fmt": "pnpm run eslint . --ext ts --fix && pnpm run prettier \"**/*.{css,html,ts,js,java}\" --write",
     "eslint": "eslint",
     "prettier": "prettier",
-    "docgen": "docgen --api CapacitorIntentsPlugin --output-readme README.md --output-json dist/docs.json",
+    "docgen": "docgen --api CapacitorIntentsPlugin --output-readme readme.md --output-json dist/docs.json",
     "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "prepublishOnly": "pnpm run build",
