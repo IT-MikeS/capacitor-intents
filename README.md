@@ -11,7 +11,7 @@ npx cap sync
 
 ## Usage
 
-See example app in `packages` folder.
+See `example-app` in `packages` folder.
 
 ## API
 
