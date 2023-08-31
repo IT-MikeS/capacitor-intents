@@ -41,7 +41,7 @@ const Home: React.FC = () => {
   }
 
   const testPlugin = async () => {
-    await CapacitorIntents.sendBroadcastIntent({action: 'example.itmikes.action', value: {testValue: "Test String"}});
+    await CapacitorIntents.sendBroadcastIntent({action: 'example.itmikes.action', extras: {testValue: "Test String"}});
     setIsTestSetup(false);
   }
 

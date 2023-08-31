@@ -55,13 +55,13 @@ public class CapacitorIntents extends Plugin {
     @PluginMethod
     public void sendBroadcastIntent(PluginCall call) {
         String actionToUse = call.getString("action");
-        JSObject passingData = call.getObject("value");
+        JSObject extraData = call.getObject("extras");
         Intent intended = new Intent(actionToUse);
-        Iterator<String> keys = passingData.keys();
+        Iterator<String> keys = extraData.keys();
 
         while (keys.hasNext()) {
             String key = keys.next();
-            String value = passingData.getString(key);
+            String value = extraData.getString(key);
             intended.putExtra(key, value);
         }
         this.getContext().sendBroadcast(intended);
