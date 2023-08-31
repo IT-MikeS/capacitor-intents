@@ -16,7 +16,7 @@ const Home: React.FC = () => {
     const rId = await CapacitorIntents.registerBroadcastReceiver({filters: ['example.itmikes.action']}, async (data) => {
       // data is a JS Object but could contain any structure
       console.dir(data);
-      const extras = JSON.parse(data['extras'].value);
+      const extras = JSON.parse(data['extras']);
       console.dir(extras);
       console.log(receiverId);
 
