@@ -60,12 +60,12 @@ unregisterBroadcastReceiver(options: { id: string; }) => any
 ### sendBroadcastIntent(...)
 
 ```typescript
-sendBroadcastIntent(options: { action: string; value: { [key: string]: any; }; }) => any
+sendBroadcastIntent(options: { action: string; extras: { [key: string]: any; }; }) => any
 ```
 
 | Param         | Type                                                             |
 | ------------- | ---------------------------------------------------------------- |
-| **`options`** | <code>{ action: string; value: { [key: string]: any; }; }</code> |
+| **`options`** | <code>{ action: string; extras: { [key: string]: any; }; }</code> |
 
 **Returns:** <code>any</code>
 
